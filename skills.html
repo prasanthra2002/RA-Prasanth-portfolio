@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - RA Prasanth</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="chart-container">
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 RA Prasanth. All rights reserved.</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['HTML', 'CSS', 'JavaScript', 'React JS', 'Angular', 'Python', 'Java', 'Spring Boot', 'PHP', 'SQL', 'MongoDB', 'Node.js', 'Data Structures', 'Machine Learning', 'Artificial Intelligence', 'System Design'],
+                datasets: [{
+                    label: 'Skill Level',
+                    data: [90, 85, 80, 75, 70, 85, 80, 75, 70, 80, 75, 80, 85, 70, 65, 75],
+                    backgroundColor: 'rgba(255, 126, 95, 0.2)',
+                    borderColor: '#ff7e5f',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
