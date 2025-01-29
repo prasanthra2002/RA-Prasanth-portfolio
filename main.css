@@ -1,0 +1,173 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero {
+    background: url('personal-website/src/images/IMG_20250128_170259.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero nav {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.quote {
+    font-size: 1.5em;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7e5f;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-img {
+    width: 200px; /* Adjusted size */
+    height: 200px; /* Adjusted size */
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-text {
+    max-width: 800px;
+    margin-left: auto;
+}
+
+footer {
+    background: #1f1c2c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Adjusted to relative */
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    color: #ff7e5f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
